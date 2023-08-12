@@ -1,0 +1,156 @@
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 200px;
+  background-color: #202124;
+  
+
+}
+
+.nav a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  color: #666;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.cards {
+  width: 200px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.cards h3 {
+  font-size: x-large;
+  margin: 0;
+}
+
+.cards p {
+  font-size: large;
+  margin: 10px auto 0;
+  width: max-content;
+}
+
+.stock {
+  color: #00b300;
+}
+
+.delivered {
+  color: #ffa500;
+}
+
+.low {
+  color: #ff0000;
+}
+
+.department {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.deptcard {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 150px;
+}
+
+.deptcard:hover {
+  transform: scale(1.05);
+}
+
+.deptname {
+  font-size: 20px;
+}
+
+.productlist {
+  margin: 0 3rem;
+  padding: 10px;
+}
+
+.productHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productHeader h4,
+select,
+label,
+button {
+  margin: 1rem;
+}
+
+.product-listbutton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-listbutton:hover {
+  background-color: #0056b3;
+}
+
+.producttable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+
+.producttable th,
+.producttable td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.producttable th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.productimage {
+  max-width: 100px;
+  height: auto;
+}
+.product-detail {
+  max-width: 100%;
+  margin: 2rem;
+  padding: 20px;
+  border-radius: 8px;
+}
