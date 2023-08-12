@@ -1,12 +1,44 @@
-import React from 'react'
+import React, { useState,useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import {InventoryContext} from "../context/inventorycontext";
 
 const Addproduct = () => {
+
+  const navigate = useNavigate();
+  const {dispatch} = useContext(InventoryContext);
+  const [newProduct, setNewProduct] = useState({
+    department: "",
+    name: "",
+    description: "",
+    price: 0,
+    stock: 0,
+    sku: "",
+    supplier: "",
+    delivered: 0,
+    imageUrl: ""
+  });
+
+  const handleInput  = (event) => {
+    const { name, value } = event.target;
+    setNewProduct((prevProduct) => ({
+      ...prevProduct,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) =>{
+e.preventDefault();
+dispatch({ type: "ADD_PRODUCT", payload: newProduct });
+
+    navigate("/products");
+  }
+
   return (
     <div>
         <div className='addproduct'>
         <h3>Add product</h3>
 
- <form >
+ <form onSubmit={handleSubmit}>
  <label htmlFor="department">Department:</label>
         <select
           id="department"

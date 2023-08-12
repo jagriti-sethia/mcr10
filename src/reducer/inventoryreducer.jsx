@@ -6,7 +6,7 @@ export const inventoryReducer = (state, action) => {
           id: newProductId,
           ...action.payload
         };
-        // saveInventoryToStorage([...state.inventory, newProduct]);
+        localStorage.setItem("inventory", JSON.stringify([...state.inventory, newProduct]));
         return {
           ...state,
           inventory: [...state.inventory, newProduct]
