@@ -8,7 +8,7 @@ export const InventoryContext = createContext(null);
 
 const Inventprovider = ({children})=>{
     const initial = {
-        inventory : JSON.parse(localStorage.getItem("inventory"))?.inventory ?? inventoryData,
+        inventory : JSON.parse(localStorage.getItem("inventory"))|| inventoryData,
         filterInventory: JSON.parse(localStorage.getItem("inventory"))?.filterInventory ?? [],
         searchby: JSON.parse(localStorage.getItem("inventory"))?.searchby ?? "",
         Filterbydepartment: JSON.parse(localStorage.getItem("inventory"))?.Filterbydepartment ?? "All",
